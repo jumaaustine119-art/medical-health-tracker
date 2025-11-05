@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import image2 from "../assets/images/signup.png";
+import image2 from "../assets/images/medical-clinic 1.svg";
 import { useState } from "react";
 
 function Sign() {
@@ -193,7 +193,7 @@ function Sign() {
         </div>
       </div>
 
-      {/* <img src={image2} alt="sign" className="w-270 h-278 ml-4 object-cover" /> */}
+      <img src={image2} alt="sign" className="w-270 h-278 ml-4 object-cover" />
     </div>
   );
 }
