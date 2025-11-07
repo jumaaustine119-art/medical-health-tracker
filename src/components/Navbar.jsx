@@ -53,7 +53,7 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
 return (
-<header className="bg-sky-700 text-white px-8 py-6 flex items-center justify-between container mx-auto max-w-7xl">
+<header className="bg-sky-700 text-white px-8 py-6 flex items-center justify-between mt-2 pl-2 mr-2">
 <div className="flex items-center gap-3">
 <div className="text-2xl font-semibold flex items-center gap-2">
 <span className="text-3xl">🩺</span>
@@ -61,6 +61,7 @@ HealthRecordTracker
 </div>
 </div>
 <nav className="gap-6 flex items-center">
+<Link to="/doctor" className="px-3 py-2">Doctor Dashboard</Link>
 <Link to="/" className="hover:underline">Home</Link>
 <Link to="/about" className="hover:underline">About</Link>
 <Link to="/contact" className="hover:underline">Contact</Link>

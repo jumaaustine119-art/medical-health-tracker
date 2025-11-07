@@ -38,7 +38,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
 return (
-<footer className="px-8 py-6 flex items-center justify-between text-sm text-slate-500">
+<footer className="px-8 py-6 flex items-center justify-between text-sm text-white bg-sky-700">
 <div>© {new Date().getFullYear()} HealthRecordTracker Inc.</div>
 <div className="space-x-4">
 <Link to="/terms">Terms</Link>
