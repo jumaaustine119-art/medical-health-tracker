@@ -1,23 +1,44 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Intro = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 to-blue-100 text-gray-800 px-6 text-center">
-      <div className="max-w-3xl">
-        <h1 className="text-5xl font-extrabold text-blue-800 mb-6">
-          Welcome to Health Record Tracker
-        </h1>
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 via-blue-50 to-white text-gray-800 px-6 text-center">
+      <motion.div
+        className="max-w-3xl"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h1
+          className="text-5xl sm:text-6xl font-extrabold text-blue-800 mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          Welcome to <span className="text-blue-600">Health Record Tracker</span>
+        </motion.h1>
 
-        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+        <motion.p
+          className="text-lg text-gray-700 mb-8 leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        >
           Manage, store, and access your health data anytime, anywhere.  
-          Our platform empowers patients and doctors to collaborate securely —  
-          because your health deserves smart technology.
-        </p>
+          Our platform bridges patients and doctors securely —  
+          empowering smarter healthcare decisions.
+        </motion.p>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <motion.div
+          className="flex flex-wrap justify-center gap-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9 }}
+        >
           <button
             onClick={() => navigate("/login")}
             className="bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-800 transition"
@@ -31,12 +52,17 @@ const Intro = () => {
           >
             Learn More
           </button>
-        </div>
+        </motion.div>
 
-        <div className="mt-16 text-gray-500 text-sm">
+        <motion.div
+          className="mt-16 text-gray-500 text-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
           <p>© {new Date().getFullYear()} Health Record Tracker</p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
